@@ -217,6 +217,18 @@ public void InitializeComponent();
 
 Implements [InitializeComponent\(\)](https://learn.microsoft.com/en-us/dotnet/api/system.windows.markup.icomponentconnector.initializecomponent 'System\.Windows\.Markup\.IComponentConnector\.InitializeComponent')
 
+<a name='DiGi.UI.WPF.Controls.ListBoxControl.RefreshItems()'></a>
+
+## ListBoxControl\.RefreshItems\(\) Method
+
+Recomputes the text shown for every item by raising [ItemAdding](DiGi.UI.WPF.Controls.md#DiGi.UI.WPF.Controls.ListBoxControl.ItemAdding 'DiGi\.UI\.WPF\.Controls\.ListBoxControl\.ItemAdding') again for each of them, in place\.
+
+For text that depends on something learnt after [SetItems&lt;T&gt;\(IEnumerable&lt;T&gt;\)](DiGi.UI.WPF.Controls.md#DiGi.UI.WPF.Controls.ListBoxControl.SetItems_T_(System.Collections.Generic.IEnumerable_T_) 'DiGi\.UI\.WPF\.Controls\.ListBoxControl\.SetItems\<T\>\(System\.Collections\.Generic\.IEnumerable\<T\>\)') - a figure fetched in the background, say. The items, their values, the selection and the scroll position are left as they are, and [SelectionChanged](DiGi.UI.WPF.Controls.md#DiGi.UI.WPF.Controls.ListBoxControl.SelectionChanged 'DiGi\.UI\.WPF\.Controls\.ListBoxControl\.SelectionChanged') is not raised; calling [SetItems&lt;T&gt;\(IEnumerable&lt;T&gt;\)](DiGi.UI.WPF.Controls.md#DiGi.UI.WPF.Controls.ListBoxControl.SetItems_T_(System.Collections.Generic.IEnumerable_T_) 'DiGi\.UI\.WPF\.Controls\.ListBoxControl\.SetItems\<T\>\(System\.Collections\.Generic\.IEnumerable\<T\>\)') again instead would clear the selection the user may already be making.
+
+```csharp
+public void RefreshItems();
+```
+
 <a name='DiGi.UI.WPF.Controls.ListBoxControl.SelectItems_T_(System.Collections.Generic.IEnumerable_T_)'></a>
 
 ## ListBoxControl\.SelectItems\<T\>\(IEnumerable\<T\>\) Method

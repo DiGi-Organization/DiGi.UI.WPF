@@ -149,16 +149,22 @@ namespace DiGi.UI.WPF.Controls
 
             foreach (T value in values)
             {
-                ListBoxItemAddingEventArgs itemAddingEventArgs = new(value);
-                ItemAdding?.Invoke(this, itemAddingEventArgs);
+                ListBox_Main.Items.Add(new ListBoxItem() { Content = Text(value), Tag = value });
+            }
+        }
 
-                string? text = value?.ToString();
-                if (itemAddingEventArgs.Handled)
+        /// <summary>
+        /// Recomputes the text shown for every item by raising <see cref="ItemAdding"/> again for each of them, in place.
+        /// <para>For text that depends on something learnt after <see cref="SetItems{T}(IEnumerable{T})"/> - a figure fetched in the background, say. The items, their values, the selection and the scroll position are left as they are, and <see cref="SelectionChanged"/> is not raised; calling <see cref="SetItems{T}(IEnumerable{T})"/> again instead would clear the selection the user may already be making.</para>
+        /// </summary>
+        public void RefreshItems()
+        {
+            foreach (object @object in ListBox_Main.Items)
+            {
+                if (@object is ListBoxItem listBoxItem)
                 {
-                    text = itemAddingEventArgs.Name;
+                    listBoxItem.Content = Text(listBoxItem.Tag);
                 }
-
-                ListBox_Main.Items.Add(new ListBoxItem() { Content = text, Tag = value });
             }
         }
 
@@ -204,6 +210,14 @@ namespace DiGi.UI.WPF.Controls
                 // Multiple or extended selection mode – use SelectedItems
                 ListBox_Main.SelectedItems.Clear();
             }
+        }
+
+        private string? Text(object? value)
+        {
+            ListBoxItemAddingEventArgs itemAddingEventArgs = new(value);
+            ItemAdding?.Invoke(this, itemAddingEventArgs);
+
+            return itemAddingEventArgs.Handled ? itemAddingEventArgs.Name : value?.ToString();
         }
 
         private void SetEnabled()
