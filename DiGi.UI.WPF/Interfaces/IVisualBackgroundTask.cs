@@ -14,6 +14,12 @@ namespace DiGi.UI.WPF.Interfaces
         string? TypeName { get; }
 
         /// <summary>
+        /// Gets a value indicating whether the underlying background task is currently running.
+        /// <para>Raised through <see cref="INotifyPropertyChanged.PropertyChanged"/> when the task starts and after it stops - finished, failed or cancelled alike.</para>
+        /// </summary>
+        bool IsRunning { get; }
+
+        /// <summary>
         /// Starts the execution of the visual background task.
         /// </summary>
         void Start();

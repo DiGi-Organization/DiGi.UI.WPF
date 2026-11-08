@@ -1406,6 +1406,21 @@ public string ExecutionTimeSpanText { get; }
 #### Property Value
 [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
+<a name='DiGi.UI.WPF.Classes.VisualBackgroundTask_TBackgroundTask_.IsRunning'></a>
+
+## VisualBackgroundTask\<TBackgroundTask\>\.IsRunning Property
+
+Gets a value indicating whether the underlying background task is currently running\.
+
+```csharp
+public bool IsRunning { get; }
+```
+
+Implements [IsRunning](DiGi.UI.WPF.Interfaces.md#DiGi.UI.WPF.Interfaces.IVisualBackgroundTask.IsRunning 'DiGi\.UI\.WPF\.Interfaces\.IVisualBackgroundTask\.IsRunning')
+
+#### Property Value
+[System\.Boolean](https://learn.microsoft.com/en-us/dotnet/api/system.boolean 'System\.Boolean')
+
 <a name='DiGi.UI.WPF.Classes.VisualBackgroundTask_TBackgroundTask_.Name'></a>
 
 ## VisualBackgroundTask\<TBackgroundTask\>\.Name Property

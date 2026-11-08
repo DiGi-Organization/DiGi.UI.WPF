@@ -215,6 +215,11 @@ namespace DiGi.UI.WPF.Classes
         }
 
         /// <summary>
+        /// Gets a value indicating whether the underlying background task is currently running.
+        /// </summary>
+        public bool IsRunning => backgroundTask.IsRunning;
+
+        /// <summary>
         /// Gets the text to be displayed on the toggle button, indicating whether the next action is to "Start" or "Stop".
         /// </summary>
         public string ToggleText
@@ -239,6 +244,7 @@ namespace DiGi.UI.WPF.Classes
                 OnPropertyChanged(nameof(ExceptionText));
                 OnPropertyChanged(nameof(StatusText));
                 OnPropertyChanged(nameof(CanToggle));
+                OnPropertyChanged(nameof(IsRunning));
             });
 
             // Sprawdzamy, czy jesteśmy w wątku UI (Windows 11 / WPF Threading Model)

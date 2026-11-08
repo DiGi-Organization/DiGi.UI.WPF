@@ -35,6 +35,21 @@ Derived
 Implements [IWPFObject](DiGi.UI.WPF.Interfaces.md#DiGi.UI.WPF.Interfaces.IWPFObject 'DiGi\.UI\.WPF\.Interfaces\.IWPFObject'), [DiGi\.Core\.Interfaces\.IObject](https://learn.microsoft.com/en-us/dotnet/api/digi.core.interfaces.iobject 'DiGi\.Core\.Interfaces\.IObject'), [System\.ComponentModel\.INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged 'System\.ComponentModel\.INotifyPropertyChanged'), [DiGi\.Core\.Interfaces\.INamedObject](https://learn.microsoft.com/en-us/dotnet/api/digi.core.interfaces.inamedobject 'DiGi\.Core\.Interfaces\.INamedObject'), [DiGi\.Core\.Interfaces\.IDescribableObject](https://learn.microsoft.com/en-us/dotnet/api/digi.core.interfaces.idescribableobject 'DiGi\.Core\.Interfaces\.IDescribableObject')
 ### Properties
 
+<a name='DiGi.UI.WPF.Interfaces.IVisualBackgroundTask.IsRunning'></a>
+
+## IVisualBackgroundTask\.IsRunning Property
+
+Gets a value indicating whether the underlying background task is currently running\.
+
+Raised through [System\.ComponentModel\.INotifyPropertyChanged\.PropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged 'System\.ComponentModel\.INotifyPropertyChanged\.PropertyChanged') when the task starts and after it stops - finished, failed or cancelled alike.
+
+```csharp
+bool IsRunning { get; }
+```
+
+#### Property Value
+[System\.Boolean](https://learn.microsoft.com/en-us/dotnet/api/system.boolean 'System\.Boolean')
+
 <a name='DiGi.UI.WPF.Interfaces.IVisualBackgroundTask.TypeName'></a>
 
 ## IVisualBackgroundTask\.TypeName Property
