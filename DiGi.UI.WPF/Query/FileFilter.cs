@@ -1,4 +1,5 @@
 ﻿using DiGi.Core.IO.Classes;
+using System.Globalization;
 
 namespace DiGi.UI.WPF
 {
@@ -16,7 +17,7 @@ namespace DiGi.UI.WPF
                 return null;
             }
 
-            string extension = System.IO.Path.GetExtension(path).ToLower().Trim();
+            string extension = System.IO.Path.GetExtension(path).ToLower(CultureInfo.CurrentCulture).Trim();
             if (!string.IsNullOrWhiteSpace(extension) && extension.StartsWith('.'))
             {
                 extension = extension[1..];

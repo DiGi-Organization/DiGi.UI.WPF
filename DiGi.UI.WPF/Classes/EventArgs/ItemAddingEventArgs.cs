@@ -5,9 +5,9 @@
     /// </summary>
     public abstract class ItemAddingEventArgs : EventArgs
     {
-        protected bool handled = false;
+        protected bool handled;
 
-        private string? name = null;
+        private string? name;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ItemAddingEventArgs"/> class.

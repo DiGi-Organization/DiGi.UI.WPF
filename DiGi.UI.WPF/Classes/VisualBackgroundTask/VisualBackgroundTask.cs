@@ -2,6 +2,7 @@
 using DiGi.Core.Interfaces;
 using DiGi.UI.WPF.Interfaces;
 using System.ComponentModel;
+using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
@@ -11,6 +12,7 @@ namespace DiGi.UI.WPF.Classes
     /// Provides a visual wrapper for a background task, enabling integration with WPF UI components and providing properties for monitoring execution status and time.
     /// </summary>
     /// <typeparam name="TBackgroundTask">The type of the background task, which must implement <see cref="IBackgroundTask"/>.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1001:Types that own disposable fields should be disposable", Justification = "The timer runs only between the task's Started and Stopped events; Stop releases its underlying timer.")]
     public class VisualBackgroundTask<TBackgroundTask> : IVisualBackgroundTask where TBackgroundTask : IBackgroundTask
     {
         protected readonly TBackgroundTask backgroundTask;
@@ -136,7 +138,7 @@ namespace DiGi.UI.WPF.Classes
                 TimeSpan duration = backgroundTask.ExecutionTimeSpan;
 
                 // Format: HH:mm:ss
-                return string.Format("{0:D2}:{1:D2}:{2:D2}", (int)duration.TotalHours, duration.Minutes, duration.Seconds);
+                return string.Format(CultureInfo.CurrentCulture, "{0:D2}:{1:D2}:{2:D2}", (int)duration.TotalHours, duration.Minutes, duration.Seconds);
             }
         }
 

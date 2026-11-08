@@ -6,6 +6,7 @@ namespace DiGi.UI.WPF.Classes
     /// <summary>
     /// Provides an abstract base implementation of a visual worker that wraps a <see cref="BackgroundWorker"/> to handle asynchronous operations.
     /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1001:Types that own disposable fields should be disposable", Justification = "BackgroundWorker holds no unmanaged resource; Component.Dispose only detaches it from a container it never joins.")]
     public abstract class VisualWorker : IVisualWorker
     {
         protected BackgroundWorker backgroundWorker = new() { WorkerReportsProgress = false };

@@ -9,7 +9,7 @@ namespace DiGi.UI.WPF.Windows
     /// </summary>
     public partial class CancellableProgressBarWindow : Window, IWindow
     {
-        private bool cancellationPending = false;
+        private bool cancellationPending;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CancellableProgressBarWindow"/> class.

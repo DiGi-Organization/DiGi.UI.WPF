@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using System.Globalization;
 
 namespace DiGi.UI.WPF
 {
@@ -15,8 +16,8 @@ namespace DiGi.UI.WPF
         {
             OpenFileDialog openFileDialog = new()
             {
-                Title = string.Format("Select {0}", fileTypeName),
-                Filter = string.Format("{0} (*.{1})|*.{1}|All Files (*.*)|*.*", fileTypeName, fileExtension),
+                Title = string.Format(CultureInfo.CurrentCulture, "Select {0}", fileTypeName),
+                Filter = string.Format(CultureInfo.CurrentCulture, "{0} (*.{1})|*.{1}|All Files (*.*)|*.*", fileTypeName, fileExtension),
                 FilterIndex = 1,
                 Multiselect = true
             };

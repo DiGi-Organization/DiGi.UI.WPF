@@ -16,10 +16,7 @@ namespace DiGi.UI.WPF
         /// <exception cref="System.ArgumentNullException">Thrown when <paramref name="backgroundTask"/> is null.</exception>
         public static IVisualBackgroundTask VisualBackgroundTask(IBackgroundTask backgroundTask, string name, string description)
         {
-            if (backgroundTask == null)
-            {
-                throw new ArgumentNullException(nameof(backgroundTask));
-            }
+            ArgumentNullException.ThrowIfNull(backgroundTask);
 
             // 1. Check if the task implements IReportableBackgroundTask<T>
             Type type_Task = backgroundTask.GetType();

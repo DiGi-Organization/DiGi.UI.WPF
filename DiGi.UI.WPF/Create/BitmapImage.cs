@@ -86,7 +86,7 @@ namespace DiGi.UI.WPF
             // Write pixels to the bitmap
             bitmap.WritePixels(new Int32Rect(0, 0, width, height), pixels, stride, 0);
 
-            using var stream = new MemoryStream();
+            using MemoryStream stream = new();
             BitmapEncoder encoder = new PngBitmapEncoder();
             encoder.Frames.Add(BitmapFrame.Create(bitmap));
             encoder.Save(stream);

@@ -1,4 +1,5 @@
 ﻿using DiGi.Core.IO.Classes;
+using System.Globalization;
 using System.Windows.Media.Imaging;
 
 namespace DiGi.UI.WPF
@@ -20,18 +21,18 @@ namespace DiGi.UI.WPF
 
             foreach (string extension in extensions)
             {
-                string? value = extension?.ToLower()?.Trim();
+                string? value = extension?.ToLower(CultureInfo.CurrentCulture)?.Trim();
                 if (string.IsNullOrWhiteSpace(value))
                 {
                     continue;
                 }
 
-                if (value.Equals(Constants.FileExtension.Jpeg_1) || value.Equals(Constants.FileExtension.Jpeg_2) || value.Equals(Constants.FileExtension.Jpeg_3) || value.Equals(Constants.FileExtension.Jpeg_4))
+                if (value.Equals(Constants.FileExtension.Jpeg_1, StringComparison.Ordinal) || value.Equals(Constants.FileExtension.Jpeg_2, StringComparison.Ordinal) || value.Equals(Constants.FileExtension.Jpeg_3, StringComparison.Ordinal) || value.Equals(Constants.FileExtension.Jpeg_4, StringComparison.Ordinal))
                 {
                     return new JpegBitmapEncoder();
                 }
 
-                if (value.Equals(Constants.FileExtension.Png))
+                if (value.Equals(Constants.FileExtension.Png, StringComparison.Ordinal))
                 {
                     return new PngBitmapEncoder();
                 }
