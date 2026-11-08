@@ -20,6 +20,16 @@ namespace DiGi.UI.WPF.Interfaces
         bool IsRunning { get; }
 
         /// <summary>
+        /// Gets the short status of the task (e.g. running, completed, failed), with the latest reported progress appended while a reportable task runs.
+        /// </summary>
+        string Status { get; }
+
+        /// <summary>
+        /// Gets the execution time of the current or last run, formatted for display.
+        /// </summary>
+        string ExecutionTimeSpanText { get; }
+
+        /// <summary>
         /// Starts the execution of the visual background task.
         /// </summary>
         void Start();

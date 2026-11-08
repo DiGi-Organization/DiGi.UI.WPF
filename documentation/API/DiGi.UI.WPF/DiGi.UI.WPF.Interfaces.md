@@ -35,6 +35,19 @@ Derived
 Implements [IWPFObject](DiGi.UI.WPF.Interfaces.md#DiGi.UI.WPF.Interfaces.IWPFObject 'DiGi\.UI\.WPF\.Interfaces\.IWPFObject'), [DiGi\.Core\.Interfaces\.IObject](https://learn.microsoft.com/en-us/dotnet/api/digi.core.interfaces.iobject 'DiGi\.Core\.Interfaces\.IObject'), [System\.ComponentModel\.INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged 'System\.ComponentModel\.INotifyPropertyChanged'), [DiGi\.Core\.Interfaces\.INamedObject](https://learn.microsoft.com/en-us/dotnet/api/digi.core.interfaces.inamedobject 'DiGi\.Core\.Interfaces\.INamedObject'), [DiGi\.Core\.Interfaces\.IDescribableObject](https://learn.microsoft.com/en-us/dotnet/api/digi.core.interfaces.idescribableobject 'DiGi\.Core\.Interfaces\.IDescribableObject')
 ### Properties
 
+<a name='DiGi.UI.WPF.Interfaces.IVisualBackgroundTask.ExecutionTimeSpanText'></a>
+
+## IVisualBackgroundTask\.ExecutionTimeSpanText Property
+
+Gets the execution time of the current or last run, formatted for display\.
+
+```csharp
+string ExecutionTimeSpanText { get; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
 <a name='DiGi.UI.WPF.Interfaces.IVisualBackgroundTask.IsRunning'></a>
 
 ## IVisualBackgroundTask\.IsRunning Property
@@ -49,6 +62,19 @@ bool IsRunning { get; }
 
 #### Property Value
 [System\.Boolean](https://learn.microsoft.com/en-us/dotnet/api/system.boolean 'System\.Boolean')
+
+<a name='DiGi.UI.WPF.Interfaces.IVisualBackgroundTask.Status'></a>
+
+## IVisualBackgroundTask\.Status Property
+
+Gets the short status of the task \(e\.g\. running, completed, failed\), with the latest reported progress appended while a reportable task runs\.
+
+```csharp
+string Status { get; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
 <a name='DiGi.UI.WPF.Interfaces.IVisualBackgroundTask.TypeName'></a>
 

@@ -1403,6 +1403,8 @@ Gets the total execution time of the task formatted as a string in "HH:mm:ss" fo
 public string ExecutionTimeSpanText { get; }
 ```
 
+Implements [ExecutionTimeSpanText](DiGi.UI.WPF.Interfaces.md#DiGi.UI.WPF.Interfaces.IVisualBackgroundTask.ExecutionTimeSpanText 'DiGi\.UI\.WPF\.Interfaces\.IVisualBackgroundTask\.ExecutionTimeSpanText')
+
 #### Property Value
 [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
 
@@ -1445,6 +1447,8 @@ Gets the current status description of the background task\.
 ```csharp
 public virtual string Status { get; }
 ```
+
+Implements [Status](DiGi.UI.WPF.Interfaces.md#DiGi.UI.WPF.Interfaces.IVisualBackgroundTask.Status 'DiGi\.UI\.WPF\.Interfaces\.IVisualBackgroundTask\.Status')
 
 #### Property Value
 [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
@@ -1622,6 +1626,8 @@ Gets the status of the background task, appended with the current reported value
 ```csharp
 public override string Status { get; }
 ```
+
+Implements [Status](DiGi.UI.WPF.Interfaces.md#DiGi.UI.WPF.Interfaces.IVisualBackgroundTask.Status 'DiGi\.UI\.WPF\.Interfaces\.IVisualBackgroundTask\.Status')
 
 #### Property Value
 [System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
