@@ -12,4 +12,3 @@
 | [DiGi\.UI\.WPF\.Delegates](DiGi.UI.WPF.Delegates.md 'DiGi\.UI\.WPF\.Delegates') | |
 | [DiGi\.UI\.WPF\.Interfaces](DiGi.UI.WPF.Interfaces.md 'DiGi\.UI\.WPF\.Interfaces') | |
 | [DiGi\.UI\.WPF\.Windows](DiGi.UI.WPF.Windows.md 'DiGi\.UI\.WPF\.Windows') | |
-| [XamlGeneratedNamespace](XamlGeneratedNamespace.md 'XamlGeneratedNamespace') | |
